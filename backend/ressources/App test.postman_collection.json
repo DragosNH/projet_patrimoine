@@ -71,6 +71,14 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "check security",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }

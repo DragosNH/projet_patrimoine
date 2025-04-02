@@ -7,6 +7,8 @@ from .models import Construction
 from .serializers import ConstructionSerializer, SignUpSerializer
 from . import serializers
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import permission_classes
 
 def hello(request):
     return HttpResponse("Hello world!")
@@ -16,6 +18,7 @@ def api(request):
     return Response({"message": "Welcome to the api"})
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def construction_list(request):
     constructions = Construction.objects.all()
     serializers = ConstructionSerializer(constructions, many=True)
@@ -28,3 +31,4 @@ def signup_view(request):
         serializer.save()
         return Response({"message": "Compte cr\u00e9\u00e9 avec succ\u00e8s"}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
