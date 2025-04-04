@@ -46,7 +46,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"username\": \"dragos\",\r\n  \"password\": \"secret123\"\r\n}",
+					"raw": "{\r\n    \"username\": \"jdoe\",\r\n    \"password\": \"123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,7 +76,130 @@
 			"name": "check security",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/constructions/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"constructions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0MzY3OTY3MywiaWF0IjoxNzQzNTkzMjczLCJqdGkiOiJiNjVjYTk2ZWI3Mzg0MTUzODU2ZmE2ZDI3NzQxYTBkZCIsInVzZXJfaWQiOjJ9.8O5kvtH7VxBeY3UVewpuNCNjUi0i8oyqO8j5ODsleUc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"first_name\": \"Dragos\",\r\n  \"last_name\": \"Test\",\r\n  \"username\": \"dragos_test\",\r\n  \"email\": \"dragos@test.com\",\r\n  \"password\": \"pass123456\",\r\n  \"confirm_password\": \"pass123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNzQ5MjUwLCJpYXQiOjE3NDM3NDg5NTAsImp0aSI6IjhmZDk5MjI5NmE2YjQzNjE5MjI3OGNhOTdlMDQ0NDllIiwidXNlcl9pZCI6Nn0.EDgdVXSjVAXX5ssPWNFlsK9sE3fqDbUZsT9PLCrsNys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNzQ4NzE2LCJpYXQiOjE3NDM3NDg0MTYsImp0aSI6ImU1MzY3MzU4NGY2ZjRiODc4NjA2NGVhMjliZDdkODVlIiwidXNlcl9pZCI6Nn0.qhtm2ubWiE94CNjY6eD4B0CzTguaufEftNfTIcs0_nY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
 			},
 			"response": []
 		}

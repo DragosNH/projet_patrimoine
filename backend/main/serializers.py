@@ -9,6 +9,8 @@ class ConstructionSerializer(serializers.ModelSerializer):
         model = Construction
         fields = '__all__'
 
+
+# Sign Up page - Django default options
 class SignUpSerializer(serializers.Serializer):
     first_name = serializers.CharField()
     last_name = serializers.CharField()
@@ -36,3 +38,10 @@ class SignUpSerializer(serializers.Serializer):
         user.save()
 
         return user
+
+
+# View user's info, for the porfile page
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["username", 'first_name', 'last_name' ,'email']

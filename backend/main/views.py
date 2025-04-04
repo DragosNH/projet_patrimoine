@@ -18,6 +18,14 @@ from django.urls import reverse
 from django.conf import settings
 from .utils import email_verification_token
 from django.contrib.auth import get_user_model
+from rest_framework.generics import RetrieveAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import ConstructionSerializer, SignUpSerializer, UserProfileSerializer
+
+
+
 
 def hello(request):
     return HttpResponse("Hello world!")
@@ -33,6 +41,7 @@ def construction_list(request):
     serializers = ConstructionSerializer(constructions, many=True)
     return Response(serializers.data)
 
+# Sign Up field
 @api_view(['POST'])
 def signup_view(request):
     serializer = SignUpSerializer(data=request.data)
@@ -54,6 +63,8 @@ def signup_view(request):
         return Response({"message": "Compte cr\u00e9\u00e9 avec succ\u00e8s. V\u00e9rifiez votre e-mail pour activer votre compte."}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+# Logout command
 @api_view(['POST'])
 def logout_view(request):
     try:
@@ -65,6 +76,7 @@ def logout_view(request):
         return Response({"error": "Invalid refresh token"}, status=status.HTTP_400_BAD_REQUEST)
 
 
+# Email verification area
 @api_view(['GET'])
 def verify_email(request, uidb64, token):
     User = get_user_model()
@@ -86,4 +98,26 @@ def verify_email(request, uidb64, token):
             {"error": "Lien invalide ou expir\u00e9"},
             status=status.HTTP_400_BAD_REQUEST
         )
+    
 
+#  View user's profile
+class UserProfileView(RetrieveAPIView):
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user
+
+# Delete account
+class DeleteAccountView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request):
+        password = request.data.get('password')
+        user = request.user
+
+        if not user.check_password(password):
+            return Response({'error': "Le mot de passe n'est pas correct."}, status=400)
+
+        user.delete()
+        return Response({'message': 'Compte supprim\u00e9 avec succ\u00e8s'}, status=200)
