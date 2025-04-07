@@ -79,8 +79,7 @@
               "RelativeToolTip": "backend\\main\\serializers.py",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-04-04T05:36:50.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T05:36:50.743Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "backend\\main\\views.py",
               "ViewState": "AgIAADEAAAAAAAAAAAAkwGIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-04-04T05:31:42.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T05:31:42.081Z"
             },
             {
               "$type": "Document",
@@ -118,8 +116,7 @@
               "RelativeToolTip": "frontend\\Assets\\Script\\mainPage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T06:53:28.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T06:53:28.838Z"
             },
             {
               "$type": "Document",
@@ -131,8 +128,7 @@
               "RelativeToolTip": "frontend\\Assets\\Script\\forgotPasswordPage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:56:52.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T08:56:52.9Z"
             },
             {
               "$type": "Document",
@@ -144,8 +140,7 @@
               "RelativeToolTip": "frontend\\Assets\\Script\\loginPage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T06:36:50.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T06:36:50.896Z"
             },
             {
               "$type": "Document",
@@ -157,8 +152,7 @@
               "RelativeToolTip": "frontend\\Assets\\Script\\signUpPage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:20:48.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T08:20:48.778Z"
             },
             {
               "$type": "Document",
@@ -170,8 +164,7 @@
               "RelativeToolTip": "frontend\\Assets\\Script\\ProfilePage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T09:13:53.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T09:13:53.659Z"
             }
           ]
         }
