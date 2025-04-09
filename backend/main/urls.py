@@ -3,6 +3,7 @@ from . import views
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from .views import DeleteAccountView
+from .views import UserProfileView
 
 
 urlpatterns = [
@@ -15,4 +16,5 @@ urlpatterns = [
     path('api/logout/', views.logout_view),
     path('api/verify-email/<uidb64>/<token>/', views.verify_email, name='verify_email'),
     path('api/delete-account/', DeleteAccountView.as_view(), name='delete-account'),
+    path('api/profile/', UserProfileView.as_view(), name='user-profile'),
 ]

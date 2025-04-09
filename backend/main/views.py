@@ -19,6 +19,8 @@ from django.conf import settings
 from .utils import email_verification_token
 from django.contrib.auth import get_user_model
 from rest_framework.views import APIView
+from rest_framework.generics import RetrieveAPIView
+from .serializers import UserProfileSerializer
 
 def hello(request):
     return HttpResponse("Hello world!")
@@ -105,3 +107,11 @@ class DeleteAccountView(APIView):
 
         user.delete()
         return Response({'message': 'Compte supprimé avec succès'}, status=200)
+
+
+class UserProfileView(RetrieveAPIView):
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user
