@@ -5,7 +5,8 @@
     "\\backend\\main",
     "\\frontend",
     "\\frontend\\Assets",
-    "\\frontend\\Assets\\Script"
+    "\\frontend\\Assets\\Script",
+    "\\frontend\\Assets\\Script\\Extra functionalities"
   ],
   "SelectedNode": "\\frontend\\Assets\\Script\\mapPage.cs",
   "PreviewInSolutionExplorer": false
